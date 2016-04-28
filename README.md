@@ -1,5 +1,5 @@
 # domoticz_playground
-Scripts and stuff I'm having fun with for Domoticz
+Scripts and stuff I'm having fun with for [Domoticz](https://www.domoticz.com)
 
 # Todo
 ## Scripts
