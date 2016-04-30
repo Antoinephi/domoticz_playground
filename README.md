@@ -3,8 +3,8 @@ Scripts and stuff I'm having fun with for [Domoticz](https://www.domoticz.com)
 
 # Todo
 ## Scripts
-- [ ] Internet up/down automatic bandwith test
-- [ ] Internet automatic ping test
+- [x] Internet up/down automatic bandwith test
+- [x] Internet automatic ping test
 - [ ] RPi's current state (CPU, Memory, Temp...)
 
 ## Arduinos
