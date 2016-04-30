@@ -6,7 +6,7 @@ from client import *
 from speedtest_cli import * 
 import os
 
-domoticz_ip = 'http://x.x.x.x:8080'
+domoticz_ip = 'http://192.168.1.78:8080'
 server_url = domoticz_ip +  '/json.htm?type=command&param=udevice&idx='
 
 # server's id used by speedtest
@@ -18,7 +18,7 @@ id_up = 3
 id_ping = 4
 
 # my computer's local ip
-pc_ip = 'x.x.x.x'
+pc_ip = '192.168.1.77'
 
 server = Server(server_url)
 
@@ -42,11 +42,11 @@ def ping_test():
 is_up = os.system('ping -c 1 ' + pc_ip)
 
 # if the pc is on, then no tests because the bandwith is probably used
-# if is_up != 0 : 
-dl, up = main(paris_orange) # speedtest api to retrieve upload & download values (in MBytes/s)
-ping = ping_test()
+if is_up != 0 : 
+	dl, up = main(paris_orange) # speedtest api to retrieve upload & download values (in MBytes/s)
+	ping = ping_test()
 
-#send values to Domoticz' server
-send_values(id_dl, dl)
-send_values(id_up, up)
-send_values(id_ping, ping)
+	#send values to Domoticz' server
+	send_values(id_dl, dl)
+	send_values(id_up, up)
+	send_values(id_ping, ping)
